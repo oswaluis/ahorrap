@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('./root.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+html{
+    height: 100%;
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.titlePlan{
+    padding: 1rem;
+    text-align: center;
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-size: 2rem;
+}
+
+.containerPlan{
+    width: 80%;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.containerPlan span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subtitlePlan{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-family: var(--title-font);
+}
+
+#resumenM1{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    font-family: var(--title-font);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+
+.ahorroDelDia {
+    display: none;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-family: var(--text-font);
+    background-color: transparent;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bolder;
+    border: none;
+    border-bottom: 2px solid var(--impact-color);
+    text-shadow:  0 0 10px var(--impact-color);
+    
+    /* box-shadow: 0 0 10px var(--impact-color), 0 0 30px var(--impact-color); */
+}
+
+.restan{
+    display: none;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.6rem;
+}
+.textFinal{
+    display: none;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-size: 1.4rem;
+    text-align: center;
+    padding-top: 1rem;
+    line-height: 1.6rem;
+    width: 70%;
+    margin: auto;
+    font-weight: bold;
+}
+.restantesDias{
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+.textoResumen{
+    display: none;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    font-family: var(--title-font);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+.textDefinitivo{
+    display: none;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    font-family: var(--title-font);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+.cantidadTotal{
+    display: none;
+    color: var(--primary-color);
+    background-color: var(--title-color);
+    width: auto;
+    max-width: 80%;
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-family: var(--title-font);
+    font-weight: bolder;
+    border: 1px solid var(--text-color);
+    box-shadow: 0 0 10px var(--impact-color),
+    0 0 30px var(--impact-color),
+    0 0 60px var(--impact-color);
+}
+
+.mercado {
+    display: none;
+    padding: 0.5rem;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.titleMercado{
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+/* -------------------------------------estilos de los botones */
+.btnAhorrapp{
+    display: none;
+    padding: 0.8rem;
+    background-color: var(--dark-green);
+    color: var(--text-color);
+    font-family: var(--title-font);
+    margin: auto;
+    text-align: center;
+    outline: none;
+    border: none;
+    height: 80px;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--text-color);
+    box-shadow: 0 0 10px var(--green),
+            0 0 30px var(--green),
+            0 0 60px var(--green);
+            margin-top: 2rem;
+}
+
+.confirmPlan{
+    display: block;
+    margin: auto;
+    position: relative;
+    padding: 1rem;
+    width: 60%;
+    font-family: var(--title-font);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: var(--second-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    border: 4px solid var(--impact-color);
+    transition: all 0.5s ease;
+    margin-top: 4rem;
+    border-radius: 0.4rem;
+}
+.confirmPlan:hover{
+    background-color: var(--impact-color);
+    color: var(--primary-color);
+    border-color: var(--second-color);
+}
+
+.btnReturn{
+    display: none;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 60%;
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background-color: var(--second-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    border: 4px solid var(--impact-color);
+}
+.titleAnimation2{
+    display: none;
+    text-align: center;
+    margin: auto;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    line-height: 5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: bolder;
+}
+
+.titleAnimation2 span{
+    width: 100%;
+    float: left;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function:ease;
+    animation-duration: 8s;
+}
+
+.span2{
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}

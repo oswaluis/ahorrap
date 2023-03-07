@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('./root.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+html{
+    height: 100vh;
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title{
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--title-font);
+    color: var(--title-color);
+}
+
+.containerWelcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    text-align: center;
+    width: 80%;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.welcome span{
+    font-weight: bolder;
+}
+
+.questionTitle{
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: var(--text-font);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+/*-------------------------------------------- estilos de los inputs */
+.containerLogin, .containerRegister{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: 0;
+}
+
+.containerLog, .containerReg{
+    position: relative;
+    width: 80%;
+}
+
+.containerLog input, .containerReg input{
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.4rem;
+    outline: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: var(--title-font);
+    transition: 0.5s;
+}
+
+.containerLog span, .containerReg span{
+    position: absolute;
+    padding: 1rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-family:var(--title-font) ;
+    text-transform: uppercase;
+    left: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.containerLog input:valid ~ span,
+.containerLogin input:focus ~ span,
+.containerReg input:focus ~ span,
+.containerReg input:valid ~span{
+    color: var(--text-color);
+    transform: translateX(1rem) translateY(-2rem);
+    font-size: 0.65rem;
+    letter-spacing: 0.3rem;
+}
+
+
+.containerLog input:valid,
+.containerLogin input:focus,
+.containerReg input:focus ,
+.containerReg input:valid {
+    border-color: var(--text-color);
+}
+/* ------------------------------------------estilos de los botones */
+.btnLogin, .btnRegister{
+    position: relative;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    transition: all 0.5s;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+
+}
+
+.btnLogin{
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.btnRegister{
+    background-color: var(--second-color);
+    color: var(--text-color);
+}
+
+.btnLogin:hover{
+    background-color: var(--impact-color);
+    box-shadow: 0 0 10px var(--impact-color),
+                0 0 30px var(--impact-color),
+                0 0 60px var(--impact-color);
+    color: var(--primary-color);
+}
+
+.btnLogin::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 600%;
+    background-color: var(--impact-color);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+}
+
+.btnLogin:hover::before, .btnRegister:hover::before{
+    width: 120%;
+}
+
+.btnLogin::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: var(--second-color);
+}
+
+.btnLogin span, .btnRegister span{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.btnRegister:hover{
+    background-color: var(--impact-color);
+    box-shadow: 0 0 10px var(--impact-color),
+                0 0 30px var(--impact-color),
+                0 0 60px var(--impact-color);
+    color: var(--primary-color);
+}
+
+.btnRegister::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 600%;
+    background-color: var(--impact-color);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+}
+
+.btnRegister:after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: var(--primary-color);
+}
+
+.btnRegister:hover::after{
+    background-color: var(--colorPrincipal);
+}

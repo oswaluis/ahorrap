@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root{
+    --primary-color: #312f2f;
+    --second-color: #707070;
+    --text-color: #dfecec;
+    --impact-color: #68e1f7;
+    --green : #43cb12;
+    --title-color: #4ca1af;
+    --dark-green: #2a8b3f;
+
+    --text-font: 'Happy Monkey', cursive;
+    --title-font: 'Russo One' , sans-serif;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes titleAnimation {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+       transform: translateY(0);
+       opacity: 0.8;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+       transform: translateY(50px);
+       opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+      clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+    
+  }
+}
+
+@keyframes subida {
+    0%{
+
+        opacity: 0;
+    }
+    80%{
+
+        opacity: 0.8;
+    }
+    90%{
+
+        opacity: 1;
+    }
+    100%{
+
+        opacity: 1;
+    }
+}

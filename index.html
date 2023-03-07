@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AhorrApp</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/index.js" type="module" defer></script>
+
+</head>
+<body>
+    <h1 class="title">AhorrApp</h1>
+    <div class="containerWelcome">
+        <p class="welcome">Bienvenido con <span>AhorrApp</span> llegó la hora de ahorrar dinero.</p>
+    </div>
+
+    <p class="questionTitle">¿Quién lo va a intentar</p>
+    <form action="" class="containerLogin" id="iniciarForm">
+        <div class="containerLog">
+            <input type="text" required id="loginEmail" >
+            <span>Usuario</span>
+        </div>
+        <div class="containerLog">
+            <input type="password" required id="loginPassword">
+            <span>Password</span>
+        </div>
+        <button class="btnLogin"><span>Iniciar Sesion</span></button>
+    </form>
+
+    <p class="questionTitle">¿Eres nuevo?</p>
+    <form action="" class="containerRegister" id="registerForm">
+        <div class="containerReg">
+            <input type="text" required id="registerEmail">
+            <span>Email</span>
+        </div>
+        <div class="containerReg">
+            <input type="password" required id="registerPassword">
+            <span>Password</span>
+        </div>
+        <button class="btnRegister"><span>Registrarse</span></button>
+    </form>
+
+    <button type="button" class="btnGoogle" id="googleLogin"> google </button>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

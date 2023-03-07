@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('./root.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+html{
+    height: 100%;
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.titleMenu{
+    padding: 1rem;
+    text-align: center;
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-size: 2rem;
+}
+
+.containerMsj , .questionTiming{
+    width: 80%;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.containerMsj span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subtitle{
+    position: relative;
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-family: var(--title-font);
+}
+/* --------------------------estilos de las imagenes */
+.containerMainAnimation{
+    position: relative;
+    margin: auto;
+    opacity: 0;
+    animation: subida 1s linear 4s 1 normal forwards;
+    transform: translateY(-280px);
+}
+.containerMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.metodoTiempo, .metodoObjetivo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.titleTime, .titleObjetivo{
+    padding: 0.8rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.imgTime, .imgObjetivo{
+    width: 8rem;
+}
+
+.imgTime img, .imgObjetivo img{
+    width: 100%;
+}
+
+/* --------------------------------estilos de interior temporalidad */
+
+.time{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    gap: 3rem;
+}
+.temporalidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+}
+
+.containerDays, .containerYears{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
+}
+
+.inputD, .inputY{
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--text-font);
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--primary-color);
+    opacity: 0.4;
+    border: 1px solid var(--text-color);
+    scale: 0.6;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.inputsActive{
+    opacity: 1 ;
+    scale: 1;
+    background-color: var(--text-color);
+    pointer-events: all;
+}
+/* --------------------------------estilos de los botones */
+
+.btnD, .btnY{
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    font-family: var(--title-font);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: var(--second-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    border: 4px solid var(--impact-color);
+    transition: all 0.5s ease;
+}
+.btnD:hover, .btnY:hover{
+    background-color: var(--impact-color);
+    color: var(--primary-color);
+    border-color: var(--second-color);
+}
+
+.btnTimeConfirm, .btnObjConfirm{
+    position: relative;
+    padding: 1rem;
+    width: 70%;
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: var(--title-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    border: 4px solid var(--impact-color);
+    transition: all 0.5s ease;
+}
+
+.btnTimeConfirm:hover, .btnObjConfirm:hover{
+    background-color: var(--impact-color);
+    box-shadow: 0 0 10px var(--impact-color),
+                0 0 30px var(--impact-color),
+                0 0 60px var(--impact-color);
+    color: var(--primary-color);
+}
+
+.btnDisable{
+    opacity: 0.6;
+    scale: 0.8;
+    pointer-events: none;
+}
+.btnActive{
+    background-color: var(--impact-color);
+    color: var(--primary-color);
+    border-color: var(--second-color);
+}
+.btnGoBack{
+    display: none;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 60%;
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background-color: var(--second-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    border: 4px solid var(--impact-color);
+}
+.loginOut{
+    display: block;
+    margin: auto;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    width: 20%;
+    font-family: var(--title-font);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    background-color: var(--second-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    border: 4px solid var(--impact-color);
+}
+/* ---------------------------estilos interior Objetivo */
+
+.meta{
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    gap: 3rem;
+}
+
+.objetivo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.objetivoCantidad, .objetivoTiempo{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% auto;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.objetivoCantidad div, .objetivoTiempo div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.span{
+    color: var(--text-color);
+    font-family: var(--title-font);
+    align-self: center;
+    font-size: 0.8rem;
+}
+.questionObj{
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.inputObj{
+    width: 70%;
+    padding: 0.6rem;
+    font-size: 1.1rem;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border: 1px solid var(--impact-color);
+    color: var(--text-color);
+    font-weight: bold;
+    font-family: var(--text-font);
+}
+
+/* -----------------------estilo de banner principal--------- */
+
+.animacionPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleAnimation{
+    text-align: center;
+    margin: auto;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    line-height: 5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: bolder;
+}
+
+.titleAnimation span{
+    width: 100%;
+    float: left;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function:ease;
+    animation-duration: 3s;
+}
+
+.span1{
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AhorrApp</title>
+    <link rel="stylesheet" href="./css/menu.css">
+    <script src="./js/index.js" type='module' defer></script>
+
+
+</head>
+<body>
+    <h2 class="titleMenu">AhorrApp</h2>
+    <div class="containerMsj">
+        <p class="mensajeMenu">El momento es ahora, con <span>Ahorrapp</span> de a poquito vamos a lograr el objetivo</p>
+    </div>
+    <h3 class="subtitle">Metodos de ahorro</h3>
+    <button class="loginOut" id="logout"> cerrar Sesion</button>
+    <div class="animacionPrincipal">
+        <p class="titleAnimation">
+            <span class="span1">Es momento de elegir</span>
+            <span class="span1"> con cual método</span>
+            <span class="span1"> vas ahorrar...</span> 
+        </p>
+    </div>
+    <div class="containerMainAnimation">
+        <div class="containerMain">
+        <div class="metodoTiempo">
+            <a class="titleTime" href="">Ahorro por tiempo</a>
+            <div class="imgTime">
+                <img src="./assets/calendar.png" alt="calendario">
+            </div>
+        </div>
+        <div class="metodoObjetivo">
+            <a class="titleObjetivo" href="">Ahorro por objetivo</a>
+            <div class="imgObjetivo">
+                <img src="./assets/objetivo.png" alt="objetivo">
+            </div>
+        </div>
+    </div>
+    </div>
+            <h3 class="questionTiming">¿Que cantidad de tiempo quieres ahorrar?</h3>
+    <form class="time" id="timeForm">
+        <div class="temporalidad">
+
+            <div class="containerDays">
+                <button class="btnD" type="button">Dias</button>
+                <input type="number" class="inputD" id="diasForm">
+            </div>
+            <div class="containerYears">
+                <button class="btnY" type="button">Años</button>
+                <input type="number" class="inputY" id="yearsForm">
+            </div>
+        </div>
+        <button class="btnTimeConfirm"  id="btnFirestoreTime" >Confirmar</button>
+    </form>
+    <form class="meta">
+        <div class="objetivo">
+            <div class="objetivoCantidad">
+                <p class="questionObj">¿Cuánto dinero necesitas?</p>
+                <div>
+                    <input type="number" class="inputObj" id="objPesos" required>
+                    <span class="span">$</span>
+                </div>
+                <p class="questionObj">¿En cuánto tiempo?</p>
+                <div>
+                    <input type="text" class="inputObj" id="objDias" required>
+                    <span class="span">dias</span>
+                </div>
+            </div>
+        </div>
+        <button class="btnObjConfirm" type="button">Confirmar</button>
+    </form>
+    <button class="btnGoBack" type="button">Regresar</button>
+</body>
+</html>
